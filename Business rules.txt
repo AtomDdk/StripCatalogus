@@ -1,0 +1,4 @@
+Een strip MOET een titel, minstens 1 auteur en een uitgeverij hebben.
+
+Een strip MAG zonder reeks bestaan.
+Een strip MAG enkel geen reeksNummer hebben als het GEEN REEKS heeft.

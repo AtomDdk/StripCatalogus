@@ -1,0 +1,56 @@
+User story 1:
+1.Strip Toevoegen
+	1.1.Strip correct Toevoegen.
+		1.1.1.Strip toevoegen met correct naam
+		1.1.2.Strip toevoegen met naam reeds in de databank
+		1.1.3.strip toevoegen met null als reeks en zonder reeksnummer.
+		1.1.4.strip toevoegen met Reeks met ander reeksnummer in de databank.
+	1.2.Strip toevoegen met incorrecte waarden
+		1.2.1.Strip toevoegen met lege titel
+			->gooit exception
+		1.2.2.Strip toevoegen met null titel
+			->gooit exception
+		1.2.3.Strip toevoegen zonder uitgeverij
+			->gooit exception
+		1.2.4.Strip toevoegen met nulls als reeks maar met reeksnummer		
+			->gooit exception
+		1.2.5.Strip toevoegen met reeks maar geen reeksnummer				
+			->gooit exception
+		1.2.6.strip toevoegen met negatief reeksnummer
+			->gooit exception
+		1.2.7.Strip toevoegen zonder auteurs
+			->gooit exception
+		1.2.8.Strip toevoegen met lege lijst auteurs
+			->gooit exception
+		1.2.9.Strip toevoegen met dubbels in de lijst auteurs
+			->gooit exception
+	1.3.Strip Toevoegen met entries niet in de databank.
+		1.3.1.Strip toevoegen met auteur niet in de databank
+			->gooit exception
+		1.3.2.Strip toevoegen met Reeks niet in de databank
+			->gooit exception
+		1.3.3.Strip toevoegen met uitgeverij niet in de databank
+			->gooit exception
+	1.4.Strip toevoegen maar niet uniek	
+		1.4.1.Strip toevoegen met Reeks en reeksnummer al in de databank
+			->gooit exception
+		1.4.2.strip dubbel toevoegen
+			-> gooit exception.
+		1.4.3.strip dubbel toevoegen zonder reeks en reeksnummer
+			-> gooit exception
+		
+2.Reeks Toevoegen
+	2.1.Reeks toevoegen met correct naam
+	2.2.Reeks toevoegen met lege naam
+	2.3.Reeks toevoegen met null naam
+	2.4.Reeks toevoegen met naam reeds in de databank
+3.Uitgeverij Toevoegen
+	3.1.Uitgeverij toevoegen met correct naam
+	3.2.Uitgeverij toevoegen met lege naam
+	3.3.Uitgeverij toevoegen met null naam
+	3.4.Uitgeverij toevoegen met naam reeds in de databank
+4.Auteur Toevoegen
+	4.1.Auteur toevoegen met correct naam
+	4.2.Auteur toevoegen met lege naam
+	4.3.Auteur toevoegen met null naam
+	4.4.Auteur toevoegen met naam reeds in de databank

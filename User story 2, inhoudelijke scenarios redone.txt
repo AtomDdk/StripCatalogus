@@ -1,0 +1,65 @@
+Update scenarios
+1.Strip updaten
+	1.1.Strip updaten maar niks verandert
+		->gooit exception
+	1.2.Strip updaten met veranderde waarden
+		1.2.1.Strip updaten en Titel en ReeksNummer veranderen
+		1.2.2.Strip updaten en titel leeg maken
+			-> gooit exception
+		1.2.3.Strip updaten en titel null maken
+			-> gooit exception
+		1.2.4.Strip updaten en negatief reeksnummer meegeven
+			-> gooit exception
+		1.2.5.Strip updaten en reeksnummer verwijderen zonder reeks te verwijderen
+			-> gooit exception
+		1.2.6.Strip updaten en reeksnummer verwijderen en ook de reeks verwijderen.
+		1.2.7.Strip updaten en Reeks verwijderen zonder reeksnummer te verwijderen.
+			-> gooit exception
+		1.2.8.Strip updaten en Titel veranderen naar een reeds bestaande titel van een andere reeks.
+		1.2.9.Strip updaten en reeksnummer veranderen naar een reeds bestaand reeksnummer van dezelfde reeks.
+			->gooit exception
+		1.2.10.Strip updaten en reeksnummer veranderen naar een reeds bestaand reeksnummer van een andere reeks (zonder de reeks te veranderen).
+		1.2.11.Strip updaten en reeksnummer en reeks verwijderen terwijl deze al in de databank zit.
+			-> gooit exception
+		1.2.12.Strip zonder reeks aanpassen
+	1.3.Strip updaten en auteur aanpassen
+		1.3.1.Strip updaten en de auteur aanpassen naar een aandere auteur die al in de databank zit.
+		1.3.2.Strip updaten en de auteur aanpassen naar een andere auteur die nog niet in de databank zit.
+			->gooit exception
+		1.3.3.Strip updaten en een Auteur toevoegen die nog niet in de databank zit.
+			->gooit exception
+		1.3.4.Strip updaten en een Auteur toevoegen die al in de databank zit.
+		1.3.5.Strip updaten en de auteurs leegmaken.
+			->gooit exception
+		1.3.6.Strip updaten en een van de auteur verwijderen.
+		
+		
+	1.4.Strip updaten en reeks aanpassen
+		1.4.1.Strip updaten en reeks aanpassen.
+		1.4.2.Strip updaten en reeks aanpassen zodat het nu deel is van een reeks die dat reeksnummer al bevat.
+			->gooit exception
+		1.4.3. zie 1.2.6.
+		1.4.4. zie 1.2.5.
+																																											1.4.5. Strip zonder reeks een reeks en reeksnummer geven.
+	1.5.Strip updaten en uitgeverij aanpassen.
+		1.5.1.Strip udpate en uitgeverij aanpassen.
+		1.5.2.Strip updaten en uitgeverij veranderen naar een uitgeverij die nog niet in de databank zit.
+		1.5.3.Strip updaten en uitgeverij verwijderen.
+	
+2.Auteur Updaten
+	2.1.Auteur updaten.
+	2.2.Auteur updaten maar niks verandert
+		->gooit exception
+	2.3.Auteur updaten en naar een reeds bestaande naam veranderen
+	
+3.Uitgeverij Updaten
+	3.1.Uitgeverij updaten.
+	3.2.Uitgeverij updaten maar niks verandert.
+		->gooit exception
+	3.3.Uitgeverij updaten en naam veranderen naar een reeds in de databank bestaande naam.
+	
+4.Reeks Updaten
+	4.1.Reeks updaten.
+	4.2.Reeks updaten en niks verandert.
+		->gooit exception
+	4.3.Reeks updaten en naam vernderen naar een reeds in de databank bestaande naam.

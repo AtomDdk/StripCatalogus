@@ -1,0 +1,29 @@
+synopsis:
+	Een library dat Json bestanden kan inlezen en schrijven. Maakt een Report telkens een Json bestand volledig is ingelezen.
+	De Json bestanden die worden ingelezen moeten een specifieke volgorde hebben(1). De Json bestanden die worden uitgelezen behouden deze volgorde.
+
+ramblings:
+	bestand van 1300 strips in lege db steken kost 2:30m, zelfde bestand terug proberen steken kost 2:10m.
+
+	Report klasse heb ik gemaakt omdat Tom in eerste instantie vroeg dat onze tool de errors rapporteerde maar nu is dit niet nodig. Als hij verandert van mening kunnen we gemakkelijk een property 
+	errormessages of zoiets maken.
+
+	kan ik de Parser testen? is dit mogelijk met moq? zoveel vragen zo weinig zin om testen te schrijven.
+
+TODO:
+	Reeks heeft een nutteloze property. List<object> strips is altijd null en houd mij tegen om een gewone Join uit te voeren in Parser.Import() doordat ik geen .Distinct kan gebruiken
+		Irriteert me mateloos maar is uiteindelijk niet zo erg.
+	
+	Parser.Import() versnellen. 3 methodes om sneller te maken:
+		- async
+		- bulkupload
+		- doen met strips wat ik met auteurs, reeksen en uitgeverijen doe. strips uit db joinen met strips uit json en dan verwijderen uit data.
+			Dit is waarschijnlijk de tijd niet waard aangezien een strip zijn uniekheid wordt bepaald via verschillende factoren.
+			persoonlijk ben ik meer fan van bulkupload.
+
+	Het Json bestand dat wordt aangemaakt door Parser.Export() kan niet worden ingelezen door Parser.Import() voor de een of andere reden.
+		dees ga een leuke zijn.
+----
+
+(1) [{"ID":1,"Titel":"deel 1","Nr":1,"Reeks":{"ID":1,"Naam":"Acqua alta","Strips":[]},"Uitgeverij":{"ID":1,"Naam":"Casterman"},"Auteurs":[{"ID":13,"Naam":"Schmitt Daria"}]}
+

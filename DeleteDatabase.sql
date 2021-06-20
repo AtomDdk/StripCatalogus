@@ -1,0 +1,13 @@
+﻿DELETE FROM StripAuteur;
+DELETE FROM StripAantal;
+DELETE FROM StripBestelling;
+DELETE FROM Bestelling;
+DBCC CHECKIDENT ('Bestelling', RESEED, 0);
+DELETE FROM Auteur;
+DBCC CHECKIDENT ('Auteur', RESEED, 0);
+DELETE FROM Strip;
+DBCC CHECKIDENT ('Strip', RESEED, 0);
+DELETE FROM Uitgeverij;
+DBCC CHECKIDENT ('Uitgeverij', RESEED, 0);
+DELETE FROM Reeks;
+DBCC CHECKIDENT ('Reeks', RESEED, 0);

@@ -1,0 +1,115 @@
+DIT BESTAND HERSCHRIJVEN CAUSE FUCK REFACTORING
+
+individueel en zonder koppeling toevoegen.
+1. schrijver
+2. uitgeverij
+
+Standaard verloop, wordt alles correct toegevoegd.
+3 standaard
+
+Een dubbele entry proberen toevoegen.
+4 dubbele entry
+
+reeds bestaand in de databank maar nog niet gekoppeld
+5 nummer
+6 reeks
+7 nummer en reeks
+8 beide schrijvers
+9 een schrijver
+10 de uitgeverij
+11 reeks en beide schrijvers
+12 reeks en een schrijver
+13 reeks en uitgeverij
+14 schrijvers en uitgeverij
+15 alles
+
+reeds bestaand in de databank en al elders gekoppeld
+16 enkele schrijver gekoppeld
+17 beide schrijvers gekoppeld
+18 uitgeverij al gekoppeld
+19 enkele schrijver en uitgeverij gekoppeld
+20 beide schrijvers en uitgeverij gekoppeld
+
+poging tot toevoegen aan de databank met foutive of ontbrekende data.
+21 nummer
+22 reeks
+23 auteurs
+24 uitgeverij
+
+poging tot toevoegen aan de databank met data die nog niet in de databank zit.
+
+inhoudelijke scenario's:
+
+	1. Er wordt een auteur toegevoegd aan het systeem met de naam SinisterSigi.
+		-> De auteur bevindt zich nu in de databank
+		
+	2. Er wordt een uitgeverij toegevoegd aan het systeem met de naam CoppensCopies.
+		-> De uitgeverij bevindt zich nu in de databank.
+		
+	3. Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. De reeks,het nummer,de uitgeverij en de auteurs bevinden zich allemaal nog niet in het systeem.
+		-> Alles wordt correct toegevoegd.
+		
+	4. Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Deze strip bevindt zich al in het systeem.
+		-> er wordt niks toegevoegd en er wordt een exception gegooid.
+		
+	5.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. De reeks,de uitgeverij en de auteurs bevinden zich allemaal nog niet in het systeem. Er bevindt zich wel al een andere strip in het systeem met hetzelfde nummer: Graveyard Shift, nummer 6 uit de reeks Batman (The New 52), geschreven door Scott Snyder met als uitgeverij DC Comics.
+		-> Alles wordt correct toegevoegd.
+		
+	6.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer,de uitgeverij en de auteurs bevinden zich allemaal nog niet in het systeem. Er bevindt zich wel al een strip van dezelfde reeks in het systeem: Asterix en de foutieve data, nummer 5 uit de reeks Asterix, geschreven door Kegelman en uitgegeven door CoppensCopies.
+		-> Alles wordt correct toegevoegd.
+	
+	7.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. de uitgeverij en de auteurs bevinden zich allemaal nog niet in het systeem. Dat nummer van die reeks bevindt zich echter wel al in het systeem, namelijk: Asterix en de valse copiën, uit de reeks Asterix, geschreven door Kegelman en uitgegeven door CoppensCopies.
+		-> Er wordt niks toegevoegd en er wordt een exception gegooid.
+	
+	8.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer,de reeks en de uitgeverij bevinden zich allemaal nog niet in het systeem. De auteurs zitten wel al in het systeem.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de auteurs worden correct gekoppeld aan de nieuwe strip zonder dat er een dubbele entry wordt aangemaakt.
+	
+	9.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer,de reeks, de uitgeverij en de auteur Goscinny René bevinden zich allemaal nog niet in het systeem. De auteur Uderzo Albert bevindt zich al in het systeem en is nog niet gekoppeld aan een strip.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd, de auteur Uderzo Albert wordt correct gekoppeld aan de strip zonder dat er een dubbele entry wordt gemaakt.
+		
+	10.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer,de reeks en de  auteurs bevinden zich allemaal nog niet in het systeem. De uitgeverij zit wel al in het systeem.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de uitgeverij wordt correct gekoppeld aan de strip zonder dat er een dubbele entry wordt aangemaakt.
+		
+	11.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer en de uitgeverij bevinden zich allemaal nog niet in het systeem. De reeks en beide auteurs bevinden zich al in het systeem.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de auteurs correct gekoppeld aan de strip zonder dat er dubbele entries worden aangemaakt.
+		
+	12.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer en de uitgeverij en een van de auteurs Uderzo Albert: bevinden zich allemaal nog niet in het systeem. De reeks en de schrijver Goscinny René bevinden zich al in het systeem.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de auteurs correct gekoppeld aan de strip zonder dat er dubbele entries worden aangemaakt.
+	
+	13.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer en de auteurs  bevinden zich allemaal nog niet in het systeem. De reeks en de uitgeverij bevinden zich al in het systeem.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de uitgeverij correct gekoppeld aan de strip zonder dat er dubbele entries worden aangemaakt.
+		
+	14.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer en de reeks bevinden zich allemaal nog niet in het systeem. De auteurs en de uitgeverij bevinden zich al in het systeem.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de uitgeverij en de auteurs correct gekoppeld aan de strip zonder dat er dubbele entries worden aangemaakt.
+		
+	15.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert.de reeks, de uitgeverijen de auteurs en een strip met hetzelfde nummer, namelijk: Graveyard Shift, nummer 6 uit de reeks Batman (The New 52), geschreven door Scott Snyder met als uitgeverij DC Comics  bevinden zich allemaal al in het systeem.
+		-> Er worden geen dubbele entries aangemaakt en de strip wordt correct toegevoegd.
+		
+	16.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert.
+		Het nummer,de reeks, de uitgeverij en de auteur Goscinny René bevinden zich allemaal nog niet in het systeem. De auteur Uderzo Albert bevindt zich al in het systeem en is al gekoppeld aan de strip: Obelix en de testen, nummer 2 in de Obelix reeks,geschreven door Uderzo Albert, uitgegeven door Vercingetorix.
+			-> De nog niet bestaande onderdelen worden correct toegevoegd, de auteur Uderzo Albert wordt correct gekoppeld aan de strip zonder dat er een dubbele entry wordt gemaakt en is nu aan 2 verschillende strips gekoppeld.
+		
+	17.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer,de reeks en de uitgeverij bevinden zich allemaal nog niet in het systeem. De auteurs zitten wel al in het systeem en zijn beiden al gekoppeld aan een andere strip, Obelix en de testen, nummer 2 in de Obelix reeks,ook geschreven door Goscinny René en Uderzo Albert, uitgegeven door Vercingetorix.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de auteurs worden correct gekoppeld aan de nieuwe strip zonder dat er dubbele entries worden aangemaakt.
+		
+	18.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer,de reeks en de uitgeverij bevinden zich allemaal nog niet in het systeem.
+	De uitgeverij zit wel al in het systeem en is al gekoppeld aan een andere strip, Obelix en de testen, nummer 2 in de Obelix reeks,geschreven door Kegelman, uitgegeven door Dargaud.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de uitgeverij wordt correct gekoppeld aan de nieuwe strip zonder dat er een dubbele entry wordt aangemaakt.
+		
+	19.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer,de reeks, en een van de auteurs bevinden zich allemaal nog niet in het systeem. Een van de auteurs en de uitgeverij zitten wel al in het systeem en zijn beiden al gekoppeld aan een andere strip, Obelix en de testen, nummer 2 in de Obelix reeks,geschreven door Goscinny René, uitgegeven door Dargaud.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de uitgeverij en Goscinny René worden correct gekoppeld aan de nieuwe strip zonder dat er dubbele entries wordt aangemaakt.
+		
+	20.Er wordt een strip toegevoegd met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Het nummer en de reeks bevinden zich allemaal nog niet in het systeem. De auteurs en de uitgeverij zitten wel al in het systeem en zijn beiden al gekoppeld aan een andere strip, Obelix en de testen, nummer 2 in de Obelix reeks,geschreven door Goscinny René en Uderzo Albert, uitgegeven door Dargaud.
+		-> De nog niet bestaande onderdelen worden correct toegevoegd en de uitgeverij en de auteurs worden correct gekoppeld aan de nieuwe strip zonder dat er dubbele entries wordt aangemaakt.
+		
+	21.Er wordt geprobeerd een strip toe te voegen met de Titel Asterix en de Gothen, uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Hij heeft helaas het ongeldige reeksnummer -6 meegegeven.
+		-> Er wordt een exception gegooid en er wordt niks toegevoegd aan het systeem.
+		
+	22.Er wordt geprobeerd een strip toe te voegen met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud en geschreven door Goscinny René en Uderzo Albert. Hij heeft helaas geen reeks meegegeven.
+		-> Er wordt een exception gegooid en er wordt niks toegevoegd aan het systeem.
+	
+	23.Er wordt geprobeerd een strip toe te voegen met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, uitgegeven door Dargaud. Hij heeft helaas geen auteurs meegegeven.
+		-> Er wordt een exception gegooid en er wordt niks toegevoegd aan het systeem.
+		
+	24.Er wordt geprobeerd een strip toe te voegen met de Titel Asterix en de Gothen, nummer 6 uit de reeks Asterix, geschreven door Goscinny René en Uderzo Albert. Hij heeft helaas geen uitgeverij meegegeven.
+		-> Er wordt een exception gegooid en er wordt niks toegevoegd aan het systeem.

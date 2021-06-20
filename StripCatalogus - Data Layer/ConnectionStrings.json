@@ -1,0 +1,8 @@
+﻿
+
+{
+  "ConnectionStrings": {
+    "Production": "Data Source=DESKTOP-VCI7746\\SQLEXPRESS;Initial Catalog=StripCatalogus;Integrated Security=True",
+    "Test": "Data Source=DESKTOP-67T82V5\\SQLEXPRESS;Initial Catalog=StripCatalogusTest;Integrated Security=True"
+  }
+}

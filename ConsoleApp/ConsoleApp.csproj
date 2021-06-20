@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatalaagTests\IntegratieTests.csproj" />
+    <ProjectReference Include="..\ImportEnExport\ImportEnExport.csproj" />
+    <ProjectReference Include="..\StripCatalogus - Data Layer\Datalaag.csproj" />
+    <ProjectReference Include="..\StripCatalogus\Domeinlaag.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+Algemeen:
+
+
+Specifiek:
+	Davy:
+	Maaren:
+		Stoppen me ambetant zijn.
+	Sven:
+		Als we een strip zonder reeks proberen updaten krijgen we een nullreference exception.

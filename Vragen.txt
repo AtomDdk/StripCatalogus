@@ -1,0 +1,21 @@
+Exceptions: custom exception schrijven voor elke klasse of voor elke functionaliteit? strip toevoegen/aanmaken/uitlezen/verkeerde id etc...
+
+
+
+moet zoeken case sensitive zijn?
+	eruit halen.
+bij auteurs, als we auteurs instellen, willen we dat de auteur uit het linkse verdwijnt?
+	verwijderen uit linkse kolom.
+DTO's eens overlopen? Zijn deze nu nodig of niet?
+	niet nodig met ado
+Dat JSON bestand, hoe excluden we dat precies van ons object?
+	gitignore file in ons project aanpassen.
+Wat we precies moeten doen met de error logs, bestandje, tonen in console app, etc...?
+	bestandje tonen
+Inhoudelijke scenario's: hoe moeten deze er eigenlijk uitzien?
+	wat we nu hebben is goed voor unit testen,
+	dan ook nog apparte scenario's voor als we onze applicatie effectief gaan doorlopen.
+Entry die al in het import bestand zit:
+	te tonen= "zoveel geïmporteerd, zoveel genegeerd omdat ze al in de databank zitten".
+	Moeten de dubbels dus niet express nogmaals tonen.
+

@@ -1,0 +1,23 @@
+﻿<Window x:Class="Presentatie_laag.Views.UpdateAuteurView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentatie_laag.Views"
+        mc:Ignorable="d"
+        Title="UpdateAuteurView" Height="100" Width="450">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+            <Label Content="Auteurs"/>
+            <ComboBox Name="AuteursComboBox" HorizontalAlignment="Left" Grid.Row="0" Width="150" Height="20" Margin="83,0,0,0" ItemsSource="{Binding Auteurs}" SelectedItem="{Binding GeselecteerdeAuteur, Mode=TwoWay}" DisplayMemberPath="Naam"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Left">
+            <Label Content="Nieuwe naam" Width="Auto"/>
+            <TextBox Width="250" Height="20" Text="{Binding NieuweAuteurNaam, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Content="Update" Margin="5,0,0,0" Width="80" Height="20" Command="{Binding UpdateAuteurCommand}" CommandParameter="{Binding ElementName=VoegAuteurToeVieww}"/>
+        </StackPanel>
+    </Grid>    
+</Window>

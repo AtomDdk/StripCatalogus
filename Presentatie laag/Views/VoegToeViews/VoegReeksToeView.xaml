@@ -1,0 +1,26 @@
+﻿<Window x:Class="Presentatie_laag.Views.VoegReeksToeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentatie_laag.Views"
+        mc:Ignorable="d"
+        Title="ReeksView" Height="80" Width="520"
+        Name="VoegReeksToeVieww"
+        >
+   
+    
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Naam"/>
+            <TextBox Width="350" Height="20" Text="{Binding ToeTeVoegenReeksNaam}"/>
+            <Button Content="Voeg Toe" Margin="10,0,0,0" Width="80" Height="20" Command="{Binding VoegReeksToeAanDbCommand}"/>
+        </StackPanel>
+    </Grid>
+    
+    
+</Window>

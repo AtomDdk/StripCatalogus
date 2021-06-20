@@ -1,0 +1,85 @@
+AUTEURREPO:
+VoegAuteurToe_MetEigenIdMoetCorrect_MoetNieuweIdAlsIdentityMaken
+VoegAuteurToe_ReturntCorrectDatatype
+
+GeefAuteurViaId_OnbestaandeId_MoetNullReturnen
+
+GeefAlleAuteurs_AlsDatabankLeegIs_MoetLegeLijstReturnen
+
+GeefAuteurViaNaam:
+	CaseSensitive
+	ExtraSpaties
+	GeenResultaten
+	NullMeegeven
+	LegeString
+
+Update_Auteur:
+	NullMeegevenAanMethode
+	AuteurAanpassenDieNogNietInDeDatabankZit
+=======================================================================================================================
+REEKSREPO:
+GeefReeks_OnbestaandeId
+
+VoegToeMetEigenId
+VoegToeReturntCorrecteReeks
+
+GeefAlleNummersVanReeks_OnbestaandeReeks
+GeefAlleNummersVanReeks_null
+GeefAlleNummersVanReeks_ReeksZonderEntries
+
+GeefAlleReeksen_AlsDatabankLeegIs_MoetLegeLijstReturnen
+
+GeefReeksViaNaam:
+	Standaard test
+	CaseSensitive
+	ExtraSpaties
+	GeenResultaten
+	NullMeegeven
+	LegeString
+
+
+Update_Reeks:
+NullMeegevenAanMethode
+AuteurAanpassenDieNogNietInDeDatabankZit
+====================================================================================================================================
+UITGEVERIJEN:
+
+GeefUitgeverij_OnbestaandeId
+
+VoegToeMetEigenId
+VoegToeReturntCorrecteUitgeverij
+
+GeefUitgeverijViaNaam:
+	CaseSensitive
+	ExtraSpaties
+	GeenResultaten
+	NullMeegeven
+	LegeString
+
+GeefAlleUitgeverijen_AlsDatabankLeegIs
+
+Update_Uitgeverij:
+	NullMeegevenAanMethode
+	AuteurAanpassenDieNogNietInDeDatabankZit
+========================================================================================================================================
+StripRepo:
+
+VoegStripToe:
+	Returnt datatype correct
+	ToevoegenZonderReeksEnZonderReeksNummer_moetslagen (gaat mogenlijks niet lukken nu)
+	ToevoegenMetCustomId
+
+GeefAlleStrips
+	OpLegeDatabank
+	
+GeefStripViaId
+	Onbestaandeid
+
+Strip updaten
+	Er verandert niks
+	Reeks en ReeksNummer null maken
+	
+	Auteur die nog niet in de databank zit
+	een van de auteurs verwijderen
+	Uitgeverij die nog niet in de databank zit
+	Reeks die nog niet in de databank zit

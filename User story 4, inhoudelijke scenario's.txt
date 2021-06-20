@@ -1,0 +1,13 @@
+JSON Parsen
+	STRINGS MOETEN NOG OPGESTELD WORDEN
+	Een enkele strip wegschrijven bezorgt de correcte JSON string.
+	Een enkele string inlezen bezorgt de correcte strip.
+	2 Strips wegschrijven bezorgt de correcte JSON string.
+	2 strips inlezen verloopt correct.
+	
+	een incorrecte string bezorgt een error?
+	een strip zonder reeks en reeksnummer wordt een correct JSON string van gemaakt
+	Deze string wordt correct ingelezen.
+	
+	Een string met <geen reeks> wordt gelezen als nullwaarde
+	

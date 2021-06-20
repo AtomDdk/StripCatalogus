@@ -1,0 +1,28 @@
+User story 3:
+	1.Strip zoeken
+	1.1.Strip zoeken op naam
+		1.1.1.Strip zoeken op deel van naam
+		1.1.2.Strip zoeken op deel van de naam met verschillende hoofdletters.
+		1.1.3.Strip zoeken op de exacte naam.
+		1.1.4.Strip zoeken op de exacte naam met verschillende hoofdletters.
+		1.1.5.Strip zoeken op de exacte naam met extra spaties.
+	1.2.Strip zoeken op reeksnummer
+		1.2.1.Strip zoeken op reeksnummer met deel van reeksnummer.
+		1.2.2.Strip zoeken met exact reeksnummer.
+	1.3.Strip zoeken op reeks
+		1.3.1.Strip zoeken op reeks zonder reeksnummer.
+		1.3.2.Strip zoeken op reeks met reeksnummer
+		1.3.3.Strip zoeken met onbestaande reeks.
+			-> returnt een lege list
+		1.3.4.Strip zoeken die geen reeks heeft.
+	1.4.Strip zoeken op Uitgeverij
+		1.4.1.Strip zoeken op uitgeverij
+		1.4.2.strip zoeken op onbestaande uitgeverij
+	1.5.Strip zoeken op auteurs
+		1.5.1.Strip zoeken op auteur die nog niet bestaat.
+		1.5.2.Strip zoeken op auteur die bestaat.
+	1.6.Strip zoeken op combinaties
+		1.6.1.Strip zoeken met alle waarden exact.
+		1.6.2.Strip zoeken met combinatie uitgeverij en auteur.
+		1.6.3.Strip zoeken met combinatie titel en reeks.
+		1.6.4.Strip zoeken met combinatie reeks en reeksnummer.

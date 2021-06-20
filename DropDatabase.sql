@@ -1,0 +1,10 @@
+﻿DROP TABLE StripAuteur;
+DROP TABLE StripAantal;
+DROP TABLE StripBestelling;
+DROP TABLE StripLevering;
+DROP TABLE Bestelling;
+DROP TABLE Levering;
+DROP TABLE Auteur;
+DROP TABLE Strip;
+DROP TABLE Uitgeverij;
+DROP TABLE Reeks;

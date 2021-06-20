@@ -1,0 +1,185 @@
+Update Scenario's:
+
+Aanpassen van een strip:
+1. niks
+2. Titel
+3. reeksnummer
+4. reeks
+5. Uitgeverij
+6. Nieuwe Auteur (bevindt zich al in de databank).
+7. Nieuwe Auteur (bevindt zich nog niet in de databank).
+8. Auteur verwijderen
+9. Andere Auteur (bevindt zich al in de databank)
+10. Andere Auteur (bevindt zich not niet in de databank)
+11. een auteur verandert, de andere blijft hetzelfde
+12. reeksnummer en reeks
+13. alles veranderen
+
+Aanpassen van een Auteur:
+14. Ongebonden Auteur
+15. Gebonden(aan meerdere) Auteur
+
+Aanpassen van een Uitgeverij:
+16. Ongebonden Uitgeverij
+17. gebonden (aan meerdere) Uitgeverij
+
+Aanpassen van een Reeks:
+18. een reeksNaam veranderen.(deel van meerdere strips)
+
+Ongeldige aanpassingen.
+19. Een strip geen reeksnummer proberen geven.
+20. Een strip een reeksnummer proberen geven dat al in de databank zit.
+21. Een strip geen reeks proberen geven.
+22. Een strip van reeks veranderen waardoor het een combinatie krijgt van reeks en reeksnummer die al bestaat.
+23. Een strip geen Uitgeverij geven.
+24. Een strip een dubbele auteur geven.
+25. Een strip geen auteurs meer geven.
+26. Een Auteur geen naam geven.
+27. Een auteur een lege string als naam geven.
+28. Een auteur eenzelfde naam als een andere auteur geven.
+29. Een Uitgeverij geen naam geven.
+30. Een Uitgeverij een lege string als naam proberen geven.
+31. Een Uitgeverij een naam van een andere uitgeverij geven.
+32. Een ReeksNaam veranderen in de ReeksNaam van een andere reeks.
+
+1. We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors, we proberen de entry te updaten ook al is er niks aangepast.
+		-> de strip blijft onveranderd.
+		
+2.  We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We veranderen de titel naar "Obelix en de testen".
+		-> de strip heeft nu de titel "Obelix en de testen", de rest is onveranderd.
+		
+3.  We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We veranderen het reeksnummer naar nummer 4.
+		-> de strip heeft nu een reeksNummer van 4, de rest is onveranderd.
+		
+4.  We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	We veranderen de reeks naar TestReeksen.
+		-> de strip is nu deel van de reeks TestReeksen, de rest is onveranderd.
+		
+5.  We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We veranderen de Uitgeverij naar "AbandonedInTheWoods".
+		-> de strip is uitgeven door "AbandonedInTheWoods", de rest is onveranderd. De uitgeverij is ook niet verwijdert uit de databank.
+		
+6.  We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	We voegen aan deze strip ook de Auteur Maarman toe. Deze bevindt zich reeds in de databank
+		-> de nieuwe auteur is correct gekoppeld aan de strip, de oude auteur is ook nog altijd correct gekoppeld.
+	
+7.  We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	We voegen aan deze strip ook de nieuwe Auteur Maarman toe. Deze bevindt zich nog niet in de databank
+		-> de nieuwe auteur is correct toegevoegd aan de databank en gekoppeld aan de strip, de oude auteur is ook nog altijd correct gekoppeld.
+		
+8.  We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We verwijderen de auteur Kegelman van deze strip.
+		-> de auteur is correct ontkoppeld van de strip maar bevindt zich wel nog altijd in de databank.
+		
+9.  We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	We veranderen de auteur Kegelman naar een andere auteur genaamd DevDavy. Deze bevindt zich al in de databank.
+		-> de oude auteur is correct ontkoppeld van de strip maar bevindt zich wel nog altijd in de databank. De nieuwe auteur is correct gekoppeld aan de strip.
+
+10.  We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	We veranderen de auteur Kegelman naar een andere auteur genaamd DevDavy. Deze bevindt zich nog niet in de databank.
+		-> de oude auteur is correct ontkoppeld van de strip maar bevindt zich wel nog altijd in de databank. De nieuwe auteur is correct toegevoegd aan de databank en gekoppeld aan de strip.
+
+11. We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We veranderen de auteur Kegelman naar een andere auteur genaamd DevDavy. Deze bevindt zich al in de databank.
+		-> de oude auteur is correct ontkoppeld van de strip maar bevindt zich wel nog altijd in de databank. De nieuwe auteur is correct gekoppeld aan de strip. De onveranderde auteur is nog altijd correct gekoppeld aan de strip.
+		
+12. We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We veranderen de reeks naar TestReeksen en het reeksNummer naar 4.
+		-> de ReeksNaam en het ReeksNummer zijn correct aangepast.
+	
+13. We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We veranderen de titel naar "Obelix en de testen", de reeks naar TestReeksen, het reeksNummer naar 4, de uitgeverij naar "AbandonedInTheWoods" en de Auteurs naar enkel "DevDavy".
+		-> de strip wordt correct aangepast, er wordt geen nieuwe aangemaakt er wordt niks verwijdert uit de databank en de strip heeft zijn Id behouden.
+	
+14.	We passen een auteur in de databank met de naam Kegelman aan naar de naam DevDavy.
+		-> De Auteur's naam wordt correct aangepast.
+	
+15. We hebben 2 strips in de databank:een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	 en een tweede strip met de naam: "Obelix en de testen", nummer 4 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+		We veranderen de naam van de auteur Kegelman naar DevDavy.
+		-> De Auteur's naam is correct verandert en beide strips zijn nog altijd correct gekoppeld hieraan.
+		
+16.	We passen een Uitgeverij in de databank met de naam CoppensTraitors aan naar de naam AbandonedInTheWoods.
+		-> De Uitgeverij's naam wordt correct aangepast.
+
+17. We hebben 2 strips in de databank:een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	 en een tweede strip met de naam: "Obelix en de testen", nummer 4 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+		We veranderen de naam van de Uitgeverij CoppensTraitors naar AbandonedInTheWoods.
+		-> De Uitgeverij's naam is correct verandert en beide strips zijn nog altijd correct gekoppeld hieraan.
+		
+18. We hebben 2 strips in de databank:een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	 en een tweede strip met de naam: "Obelix en de testen", nummer 4 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+		We veranderen de naam van de reeks naar Obelix.
+		-> De Naam van de reeks is correct verandert in beide strips.
+		
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+EXCEPTIONS:
+
+19:	We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We proberen het reeksnummer van de strip te veranderen in -3.
+		-> Er wordt een exception gegooid en de strip blijft onveranderd.
+
+20:	We hebben 2 strips in de databank:een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	 en een tweede strip met de naam: "Obelix en de testen", nummer 4 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+		We veranderen het reeksNummer van de eerste strip naar het nummer 4.
+		-> Er wordt een exception gegooid en de strip blijft onverandert.
+		
+21:	We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We proberen de titel te veranderen in niks/te verwijderen.
+		-> Er wordt een exception gegooid en de strip blijft onveranderd.
+
+22:	We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We proberen de titel te veranderen in een lege string.
+		-> Er wordt een exception gegooid en de strip blijft onveranderd.
+
+23:	We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We proberen de reeks te veranderen in een lege string.
+		-> Er wordt een exception gegooid en de strip blijft onveranderd.
+
+24:	We hebben 2 strips in de databank:een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	 en een tweede strip met de naam: "Obelix en de testen", nummer 3 in de reeks Obelix geschreven door Kegelman, uitgeven door CoppensTraitors.
+		We veranderen de reeks van de eerste strip naar de reeks Obelix.
+		-> Er wordt een exception gegooid en de strip blijft onverandert.
+
+25:	We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman en Maarman, uitgeven door CoppensTraitors.
+	We proberen de uitgeverij te verwijderen van de strip.
+		-> Er wordt een exception gegooid en de strip blijft onveranderd.
+		
+26:	We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	We proberen nogmaals de Auteur Kegelman toe te voegen.
+		-> Er wordt een exception gegooid en de strip blijft onveranderd.
+	
+27. We passen een strip met de naam: "Asterix en de testen" nummer 3 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	We proberen de Auteur Kegelman te verwijderen van de strip.
+		-> Er wordt een exception gegooid en de strip blijft onveranderd.
+	
+28. We hebben een Auteur Kegelman.
+	We proberen zijn naam te verwijderen.
+		-> Er wordt een exception gegooid en de auteur blijft onveranderd.
+	
+29. We hebben een Auteur Kegelman.
+	We proberen zijn naam in een lege string te veranderen.
+		-> Er wordt een exception gegooid en de auteur blijft onveranderd.
+		
+30. We hebben een Auteur Kegelman en een Auteur Maarman.
+	We proberen de naam van de eerste auteur te veranderen naar Maarman.
+		-> Er wordt een exception gegooid en de auteur blijft onveranderd.
+		
+31. We hebben een Uitgeverij CoppensTraitors.
+	We proberen naam van de uitgeverij te verwijderen.
+		-> Er wordt een exception gegooid en de uitgeverij blijft onveranderd.
+		
+32. We hebben een Uitgeverij CoppensTraitors.
+	We proberen naam van de uitgeverij in een lege string te veranderen.
+		-> Er wordt een exception gegooid en de uitgeverij blijft onveranderd.
+		
+33. We hebben een Uitgeverij CoppensTraitors een uitgeverij AbandonedInTheWoods.
+	We proberen naam van de eerste uitgeverij te veranderen naar AbandonedInTheWoods.
+		-> Er wordt een exception gegooid en de uitgeverij blijft onveranderd.
+		
+34:	We hebben 2 strips in de databank:een strip met de naam: "Asterix en de testen" nummer 4 in de reeks Asterix geschreven door Kegelman, uitgeven door CoppensTraitors.
+	 en een tweede strip met de naam: "Obelix en de testen", nummer 3 in de reeks Obelix geschreven door Kegelman, uitgeven door CoppensTraitors.
+		We veranderen de reeks van de eerste strip naar de reeks Obelix.
+		-> Er wordt een exception gegooid en de strip blijft onverandert.
